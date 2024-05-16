@@ -24,12 +24,12 @@ jobs:
           node-version: '18'
           cache: ${{inputs.cache}}
       - run: |
-            if [ -f ./pnpm-lock.yaml ]; then
-              echo "pnpm"
+            if [ -f ./pnpm-lock.yaml ]; then 
+              pnpm i
             elif [ -f ./yarn.lock ]; then
-              echo "yarn"
-            else
-              echo "npm"
+              yarn 
+            else 
+              npm i 
             fi
         shell: bash
       - run: ls -la
