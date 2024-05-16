@@ -31,5 +31,5 @@ jobs:
               echo "npm"
             fi
         shell: bash
-      - run: -ls-la
+      - run: ls -la
         shell: bash
